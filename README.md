@@ -20,7 +20,7 @@ g++ -I "./Eigen3" -I "./stb" main.cpp -o main
 ## 参数设置
 
 ```cpp
-\\ main.cpp
+// main.cpp
 const int image_width = 400;        // 图像宽度
 const int image_height = 250;       // 图像高度
 const int samples_per_pixel = 20;   // 每个像素采样的光线数
@@ -41,7 +41,7 @@ const int max_depth = 10;            // 光线弹射的最大次数
 ## 加载要渲染的物体
 
 ```cpp
-\\ main.cpp
+// main.cpp
 
 hittable_list world;
 // 加入一个球体
@@ -52,6 +52,6 @@ world.add(make_shared<triangle>(Vector3d(-1, -1, -1), Vector3d(1, -1, -1), Vecto
 // 加入一个obj模型 (建议少面数的模型)
 hittable_list cube;
 cube.load_obj("./model/cube.obj");
-orld.add(make_shared<hittable_list>(cube));
+world.add(make_shared<hittable_list>(cube));
 
 ```
