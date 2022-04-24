@@ -6,8 +6,16 @@
 
 ![](image/image_003.png)
 
+## 开始渲染
 
+```shell
+git clone https://github.com/AEMShana/RayTracing.git
+cd ./RayTracing
+g++ -I "./Eigen3" -I "./stb" main.cpp -o main
+./main
+```
 
+即可在同一目录下得到 `image.png` 文件。
 
 ## 参数设置
 
@@ -47,12 +55,3 @@ cube.load_obj("./model/cube.obj");
 orld.add(make_shared<hittable_list>(cube));
 
 ```
-
-## 开始渲染
-
-```shell
-g++ -I "./Eigen3" -I "./stb" main.cpp -o main
-./main
-```
-
-即可在同一目录下得到 `image.png` 文件。
